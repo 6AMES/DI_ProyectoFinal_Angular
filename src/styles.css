@@ -1,3 +1,8 @@
 body {
     margin: 0;
 }
+
+@font-face {
+    font-family: "Pilowlava";
+    src: url("assets/fonts/Pilowlava-Regular.woff") format('woff');
+}

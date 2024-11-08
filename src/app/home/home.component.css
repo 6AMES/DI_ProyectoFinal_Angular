@@ -1,0 +1,82 @@
+.hero-container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-family: Pilowlava;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.selector_mw {
+    display: flex;
+    width: 100%;
+}
+
+.selector_mw div {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.selector_mw div img {
+    width: 100%;
+    display: flex;
+}
+
+.banner {
+    position: absolute !important;
+    height: 1rem;
+    top: 50%;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    transform: translateY(-50%);
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 500;
+    font-family: Teko;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.banner.white {
+    background-color: white;
+    color: black;
+}
+
+.banner.black {
+    background-color: black;
+    color: white;
+}
+
+.selector_mw div:hover .banner {
+    opacity: 1;
+}

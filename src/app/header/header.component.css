@@ -1,6 +1,7 @@
-@font-face {
-    font-family: "Pilowlava";
-    src: url("../assets/fonts/Pilowlava-Regular.woff") format('woff');
+header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
 }
 
 nav {
@@ -8,8 +9,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     margin: 1rem;
-    background-color: white;
-    border: solid 2px black;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff80;
     border-radius: 0.5rem;
 }
 
