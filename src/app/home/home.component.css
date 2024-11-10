@@ -1,35 +1,18 @@
-.hero-container {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    cursor: default;
-}
+/* General */
 
-.hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    transform: translate(-20%, -42.5%);
-    text-align: center;
-    color: black;
-    z-index: 1;
-}
-
-.hero-content h1 {
+h1 {
     font-family: Pilowlava;
     font-size: 5rem;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
 }
+
+/* Hero Inicial */
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Selección Hombre Mujer */
 
 .selector_mw {
     display: flex;
@@ -47,7 +30,7 @@
     display: flex;
 }
 
-.slider {
+.selector-slider {
     position: absolute !important;
     top: 50%;
     left: 0;
@@ -66,38 +49,38 @@
     text-transform: uppercase;
 }
 
-.slider.white {
+.selector-slider.white {
     background-color: white;
     color: black;
 }
 
-.slider.black {
+.selector-slider.black {
     background-color: black;
     color: white;
 }
 
-.slider .slide {
+.selector-slider .selector-slide {
     min-width: 100%;
     width: 100%;
     display: flex;
 }
 
-.slide div {
+.selector-slide div {
     animation: scroll-text 2s linear infinite;
 }
 
-.slider .slide div {
+.selector-slider .selector-slide div {
     min-width: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.selector_mw div:hover .slider {
+.selector_mw div:hover .selector-slider {
     opacity: 1;
 }
 
-.slider::before {
+.selector-slider::before {
     content: attr(data-text) " " attr(data-text) " " attr(data-text);
     display: flex;
 }
@@ -109,4 +92,184 @@
     100% {
         transform: translateX(-200%);
     }
+}
+
+/* No Busques Más */
+
+.brands .title h1 {
+    padding: 5rem 1rem 0rem 5rem;
+    margin: 0;
+}
+
+.brand-gallery {
+    display: flex;
+    width: 100%;
+}
+
+.brand-gallery .item {
+    position: relative;
+    margin: 1rem;
+    text-decoration: none;
+    font-family: Teko;
+    color: black;
+}
+
+.brand-gallery .item img {
+    width: 100%;
+}
+
+
+.info {
+    width: fit-content;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.product-title {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.product-brand {
+    font-size: 20px;
+}
+
+/* Galería */
+
+.gallery {
+    background-color: black;
+}
+
+.gallery .title h1 {
+    margin: 0;
+    margin-top: 4rem;
+    padding: 5rem 1rem 0rem 5rem;
+    color: white;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.items .item {
+    margin: 1rem;
+    position: relative;
+}
+
+.items .item img {
+    width: 100%;
+    height: 100%;
+}
+
+.creator {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    padding: 10px 0px;
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 500;
+    font-family: Teko;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+}
+
+.items .item:hover .creator {
+    opacity: 1;
+}
+
+/* Descuento */
+
+.discount {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.discount div {
+    padding: 4rem 1rem;
+}
+
+.discount h1 {
+    font-family: Teko;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.discount p {
+    font-family: Teko;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.button-a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 0.5rem;
+}
+
+.button-a::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 12px);
+    background-color: black;
+    transition: 0.3s ease-in-out;
+    transform: scaleY(1);
+}
+
+.button-a:hover::before {
+    transform: scaleY(0);
+}
+
+.button-a::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: -2px;
+    height: calc(100% + 4px);
+    width: calc(100% - 12px);
+    background-color: black;
+    transition: 0.3s ease-in-out;
+    transform: scaleX(1);
+    transition-delay: 0.5s;
+}
+
+.button-a:hover::after {
+    transform: scaleX(0);
+}
+
+.button-a span {
+    position: relative;
+    z-index: 3;
+    font-family: Teko;
+}
+
+.discount button {
+    background-color: none;
+    text-decoration: none;
+    background-color: black;
+    border: none;
+    margin-top: 2rem;
 }
