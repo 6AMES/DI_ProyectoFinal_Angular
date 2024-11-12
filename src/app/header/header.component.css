@@ -55,4 +55,6 @@ li {
     font-family: Teko;
     font-size: 20px;
     margin-top: 3px;
+    color: black;
+    cursor: pointer;
 }
