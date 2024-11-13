@@ -13,7 +13,9 @@ h1 {
 }
 
 .carousel-item img {
+    width: 100%;
     height: 100vh;
+    object-fit: cover;
 }
 
 /* Selección Hombre Mujer */
@@ -50,7 +52,6 @@ h1 {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
 .selector-slider.white {
@@ -82,11 +83,6 @@ h1 {
 
 .selector_mw div:hover .selector-slider {
     opacity: 1;
-}
-
-.selector-slider::before {
-    content: attr(data-text) " " attr(data-text) " " attr(data-text);
-    display: flex;
 }
 
 @keyframes scroll-text {
@@ -123,13 +119,11 @@ h1 {
     width: 100%;
 }
 
-
 .info {
     width: fit-content;
     color: black;
     display: flex;
     flex-direction: column;
-    align-items: left;
 }
 
 .product-title {
@@ -278,4 +272,58 @@ h1 {
     background-color: black;
     border: none;
     margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 4rem;
+        padding: calc(4rem + 81px) 1rem 0rem 3rem !important;
+    }
+
+    .carousel {
+        height: 60vh;
+    }
+
+    .carousel-item img {
+        height: 60vh;
+    }
+
+    .brand-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .brand-gallery .item {
+        width: 100%;
+        margin: 0rem !important;
+    }
+
+    .items {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+        padding: calc(2rem + 81px) 0.5rem 0rem 2rem !important;
+    }
+
+    .selector-slider {
+        display: none;
+    }
+
+    .creator {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        padding: calc(1rem + 81px) 0.5rem 0rem 0.5rem !important;
+        text-align: center;
+    }
 }

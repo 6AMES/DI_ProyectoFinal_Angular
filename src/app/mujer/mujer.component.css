@@ -2,6 +2,7 @@
 
 main {
     background-color: #f0f0f0;
+    width: 100%;
 }
 
 h1 {
@@ -101,4 +102,38 @@ h1 {
     background-color: black;
     border-top: solid 2px black;
     font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 4rem;
+        padding: calc(4rem + 81px) 1rem 0rem 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+        padding: calc(3rem + 81px) 0.5rem 0rem 2rem;
+    }
+
+    .despawn {
+        display: none;
+    }
+
+    .item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        padding: calc(2rem + 81px) 0.5rem 0rem 0.5rem;
+        text-align: center;
+    }
+    
+    .info {
+        display: block;
+    }
 }
